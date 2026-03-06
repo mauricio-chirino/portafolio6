@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo trabajo</title>
+    <!-- Bootstrap CSS - Framework para estilos y componentes responsivos -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome - Biblioteca de iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- JavaScript -->
+    <script src="assets/js/arriba.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Sitio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Aside - Contenido lateral con información adicional -->
+    <aside>
+      <div class="container centro">
+        <div class="row centro">
+          <div class="col-lg-12">
+            <h1>Información Adicional</h1>
+            <p>Recursos y enlaces útiles sobre automatización</p>
+          </div>
+          <img src="assets/img/light.png" style="width: 300px; height: 220px;" alt="Icono de luz">
+          <div class="mt-3">
+            <button type="button" class="btn btn-primary" onclick="mostrarAlerta()">
+              Mostrar Alerta
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Sección principal de contenido -->
+    <main>
+      <!-- Sección de Automatización - Muestra características de automatización de campañas -->
+      <section>
+        <!-- Contenedor principal de Bootstrap -->
+        <div class="container">
+          <!-- Fila para organizar el contenido en columnas -->
+          <div class="row">
+            <!-- Columna principal con el contenido -->
+            <div class="col-lg-8">
+              <h1>Automatización</h1>
+              <p>Ahorra tiempo con campañas automatizadas y secuencias inteligentes</p>
+              
+              <!-- Article - Contenido principal independiente -->
+              <article>
+                <h2>Características Principales</h2>
+                <!-- Contenedor para las tarjetas de características -->
+                <div class="automation-features">
+                  <!-- Tarjeta 1: Secuencias Automáticas -->
+                  <div class="feature-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Secuencias Automáticas</h3>
+                    <p>Configura flujos de trabajo que se ejecutan solos</p>
+                  </div>
+                  
+                  <!-- Tarjeta 2: Programación Inteligente -->
+                  <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Programación Inteligente</h3>
+                    <p>Envía mensajes en el momento óptimo para cada prospecto</p>
+                  </div>
+                  
+                  <!-- Tarjeta 3: Sincronización CRM -->
+                  <div class="feature-card">
+                    <i class="fas fa-sync"></i>
+                    <h3>Sincronización CRM</h3>
+                    <p>Integra automáticamente con tus herramientas existentes</p>
+                  </div>
+                </div>
+              </article>
+
+              <div class="mt-3">
+                <button id="btnArriba" class="btn btn-primary">Ir arriba</button>
+              </div>
+            </div>
+            
+            <!-- Aside lateral dentro del contenido principal -->
+            <aside class="col-lg-4">
+              <div class="sidebar-content">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="list-unstyled">
+                  <li><a href="#">Documentación</a></li>
+                  <li><a href="#">Tutoriales</a></li>
+                  <li><a href="#">Soporte</a></li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer - Pie de página -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p>&copy; 2026 Segundo trabajo. Todos los derechos reservados.</p>
+            <p>Contacto: info@ejemplo.com</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS - Scripts para componentes interactivos de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script personalizado para mostrar alerta y scroll -->
+    <script>
+        function mostrarAlerta() {
+            alert('¡Hola! Esta es una alerta personalizada.');
+        }
+        document.getElementById('btnArriba').addEventListener('click', scrollArriba);
+    </script>
+</body>
+</html>

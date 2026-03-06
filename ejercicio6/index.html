@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad jQuery y Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="container mt-4">
+
+    <h1>Actividad M2 L6</h1>
+
+    <!-- Lista inicial -->
+    <h2>Lista manipulada con jQuery</h2>
+    <ul id="miLista">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+    <!-- Botón ocultar/mostrar lista -->
+    <button id="toggleBtn" class="btn btn-secondary mt-2">Ocultar lista</button>
+
+    <hr>
+
+    <!-- Plugin Bootstrap: Modal -->
+    <h2>Ejemplo de Plugin Bootstrap (Modal)</h2>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal">
+        Abrir Modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="miModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ejemplo Modal</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    ¡Hola! Este es un modal de Bootstrap funcionando con jQuery.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        $(document).ready(function () {
+            // Cambiar color de texto de los elementos de la lista
+            $("#miLista li").css("color", "blue");
+
+            // Agregar dinámicamente un cuarto elemento
+            $("#miLista").append("<li>Elemento 4</li>");
+
+            // Botón ocultar/mostrar lista
+            $("#toggleBtn").click(function () {
+                if ($("#miLista").is(":visible")) {
+                    $("#miLista").hide();
+                    $(this).text("Mostrar lista");
+                } else {
+                    $("#miLista").show();
+                    $(this).text("Ocultar lista");
+                }
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS Bundle (incluye Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
